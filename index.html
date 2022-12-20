@@ -6,23 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-A-Sketch</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js" defer></script>
 </head>
 <body>
+    
+    <h1 class="heading"> Etch _a_ sketch </h1>
 
-    <h1 class="heading"> Etch _A_ Sketch </h1>
-
-
-
+    
+    
     <div class="letsStartEtching">
 
-
+        
         <div class="selectYourFavTemp">
-        <div>
-            <button id = colorPicker>Color Mode</button>
-        </div>
-        <div>
-            <button id="rainbowMode">Rainbow Mode</button>
+            <div>
+                <button id = colorMode>Color Mode</button>
+            </div>
+            <div>
+                <button id="rainbowMode">Rainbow Mode</button>
         </div>
         <div>
             <button id="erasor">Erasor</button>
@@ -32,18 +31,22 @@
         </div>
 
         <div class="slideSelector">
-            <h4 id="rangeValue">Select The Range</h4>
-            <input type="range" min="1" max="64" value="" class="slider" id="myRange" oninput="rangeValue.innerText=this.value +' x ' + this.value">
+            <h4 id="rangeValue">32 x 32</h4>
+            <input type="range" min="1" max="64" value="32" class="slider" id="myRange" oninput="rangeValue.innerText=this.value + ' x ' + this.value">
         </div>
 
         </div>
-
+        
         <div class="etchingPad">
             
         </div>
 
         
     </div>
+
+
+
     
+    <script src="./script.js"></script>
 </body>
 </html>
