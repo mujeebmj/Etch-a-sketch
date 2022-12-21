@@ -33,6 +33,7 @@
     width: 120.047px;
 }
 .input{
+    text-align: center;
     width: 80px;
     color: black;
     padding: 10px;
@@ -65,4 +66,16 @@
     display: grid;
     border: 5px solid black;
     border-radius: 7px;
+    
 }
+
+
+
+
+
+
+
+
+
+
+
