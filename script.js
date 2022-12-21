@@ -3,7 +3,7 @@ let rainbowMode = document.querySelector("#rainbowMode") ;
 let erase = document.querySelector("#erase") ;
 let clear = document.querySelector("#clear") ;
 let etchingPad = document.querySelector(".etchingPad") ;
-
+let mysound = new Audio("./sound.mp3");
 document.addEventListener("DOMContentLoaded" , letsStartEtching(16)) ;
 
 
@@ -21,9 +21,11 @@ for(let i = 0 ; i < amount ; i++){
 
     let square = document.createElement('div') ;
     square.style.backgroundColor = 'white' ;
-    square.style.border = '1px solid gray' ;
+    // square.style.border = '1px solid gray' ;
     etchingPad.appendChild(square)         //we also use this // etchingPad.insertAdjacentElement(("beforeend") , square) 
+    square.addEventListener("mouseover" , () => square.style.backgroundColor='green')
 }
+
 
 }
 
@@ -34,15 +36,20 @@ function  setGridSize (){
     let inputValue = document.querySelector(".input").value ;
 
     if(inputValue < 101 && inputValue > 1){
-
     letsStartEtching(inputValue);
+    mysound.play()
 
 }   else{
 
     let error = document.querySelector('#errorMassage');
     error.textContent = "Size Must Be Between 2 to 100"
+    mysound.play()
 
 }
 }
 
 // setGridSize()
+
+function selectYourFavTemp(){
+
+}
