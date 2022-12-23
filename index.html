@@ -18,25 +18,32 @@
         
         <div class="selectYourFavTemp">
             <div>
-                <button id = colorMode>Color Mode</button>
+                <button id="grey" onclick="changeColor('grey')">Grey</button>
             </div>
-            <div>
-                <button id="rainbowMode">Rainbow Mode</button>
-        </div>
-        <div>
-            <button id="erasor">Erasor</button>
-        </div>
-        <div>
-            <button id="clear">Clear</button>
-        </div>
 
-        <div class="sizeSelector">
-            <button id="setSize" onclick="setGridSize()">Set Size</button>
-            <input type="text" placeholder="Enter Size" class="input">
-        </div>
-        <div>
-            <p id="errorMassage"></p>
-        </div>
+            <div>
+                <button id="black" onclick="changeColor('black')">Black</button>
+            </div>
+
+            <div>
+                <button id="rainbow" onclick="changeColor('random')">Rainbow Mode</button>
+            </div>
+
+            <div>
+                <button id="erasor" onclick="changeColor('white')">Erasor</button>
+            </div>
+
+            <div>
+                <button id="clear" onclick="window.location.reload()">Clear</button>
+            </div>
+
+            <div class="sizeSelector">
+
+                <p>Set Your Size</p>
+                <input type="range" min="2" max="64" class="slider" oninput="setSize.innerText = this.value + ' X ' + this.value" onchange="setGridSize()">
+                <p id="setSize"> 16 x 16 </p>
+
+            </div>
 
         </div>
         

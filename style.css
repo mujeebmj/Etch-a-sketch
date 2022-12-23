@@ -16,31 +16,23 @@
 }
 
 
-#colorMode , #rainbowMode , #erasor , #clear , #setSize{
+#black, #grey, #rainbow , #erasor , #clear{
     font-weight: bold;
-    margin: 20px;
+    margin: 16px;
     padding: 10px;
     background-color: rgb(224, 153, 61);
     border: 3px solid rgb(111, 11, 170);
     border-radius: 30px;
 }
 
-#colorMode:hover , #rainbowMode:hover , #erasor:hover , #clear:hover , #setSize:hover{
+#black:hover , #grey:hover , #rainbow:hover , #erasor:hover , #clear:hover {
     cursor: pointer;
     color:rgb(111, 11, 170);
 }
-#colorMode , #erasor , #clear , #setSize {
+#black , #grey, #erasor , #clear {
     width: 120.047px;
 }
-.input{
-    text-align: center;
-    width: 80px;
-    color: black;
-    padding: 10px;
-    border: 3px solid rgb(111, 11, 170);
-    background-color: burlywood;
-    border-radius: 20px;
-}
+
 
 .letsStartEtching{
     align-items: center;
@@ -48,15 +40,25 @@
     margin-left: 20%;
 }
 
+
 .selectYourFavTemp{
-    margin-left: 10px;
+    margin-left: 60px;
     padding: 10px;
-    text-align: center;
-    justify-content: center;
-    border: 5px solid black;
-    width: 300px;
-    height: 430px;
     border-radius: 10px;
+    text-align: center;
+    border: 5px solid black;
+    width: 180px;
+    height: 430px;
+}
+
+.color{
+
+    width: 120.047px;
+    margin: 5px;
+    border-radius: 30px;
+}
+.pickColor{
+    margin-top: 17px;
 }
 .etchingPad{
     background-color: white;
@@ -64,11 +66,14 @@
     height: 450px;
     width: 450px;
     display: grid;
-    border: 5px solid black;
+    border: 5px solid teal;
     border-radius: 7px;
+
     
 }
-
+.etchingPad:hover{
+    cursor:pointer;
+}
 
 
 

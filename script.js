@@ -1,55 +1,65 @@
-let colorMode = document.querySelector("#colorMode") ;
-let rainbowMode = document.querySelector("#rainbowMode") ;
-let erase = document.querySelector("#erase") ;
-let clear = document.querySelector("#clear") ;
+let eraseThePad = document.querySelector("#erase") ;
+let clearTheBoard = document.querySelector("#clear") ;
 let etchingPad = document.querySelector(".etchingPad") ;
-let mysound = new Audio("./sound.mp3");
+
+
+
+
 document.addEventListener("DOMContentLoaded" , letsStartEtching(16)) ;
 
 
 
 function letsStartEtching(size) {
-
-let squares = etchingPad.querySelectorAll('div')
-    squares.forEach((squares)  => squares.remove())  
     
-etchingPad.style.gridTemplateColumns = `repeat(${size} , 1fr)`;
-etchingPad.style.gridTemplateRows = `repeat(${size} , 1fr)`;
-let amount = size * size;
-
-for(let i = 0 ; i < amount ; i++){
-
-    let square = document.createElement('div') ;
-    square.style.backgroundColor = 'white' ;
-    // square.style.border = '1px solid gray' ;
-    etchingPad.appendChild(square)         //we also use this // etchingPad.insertAdjacentElement(("beforeend") , square) 
-    square.addEventListener("mouseover" , () => square.style.backgroundColor='green')
-}
-
-
+    let divs = etchingPad.querySelectorAll('div')
+    divs.forEach((squares)  => squares.remove())  
+    
+    etchingPad.style.gridTemplateColumns = `repeat(${size} , 1fr)`;
+    etchingPad.style.gridTemplateRows = `repeat(${size} , 1fr)`;
+    let amount = size * size;
+    
+    for(let i = 0 ; i < amount ; i++){
+        
+        let square = document.createElement('div') ;
+        square.style.backgroundColor = 'white' ;
+        // square.style.border = '1px solid gray' ;
+        etchingPad.insertAdjacentElement(("beforeend") , square) 
+        square.addEventListener("mouseover" , setColor )
+    }
+    
 }
 
 
 
 function  setGridSize (){
-
-    let inputValue = document.querySelector(".input").value ;
-
-    if(inputValue < 101 && inputValue > 1){
-    letsStartEtching(inputValue);
-    mysound.play()
-
-}   else{
-
-    let error = document.querySelector('#errorMassage');
-    error.textContent = "Size Must Be Between 2 to 100"
-    mysound.play()
+    
+    let sliderValue = document.querySelector(".slider").value ;
+        letsStartEtching(sliderValue);
 
 }
+
+
+var color = "green";
+function setColor(){
+
+    if( color == "random"){
+
+    this.style.backgroundColor = `hsl(${Math.random() * 360}, 100% , 50%`;
+
+    }else{
+        this.style.backgroundColor = color
+    }
+    
 }
 
-// setGridSize()
 
-function selectYourFavTemp(){
-
+function changeColor (choice){   
+    color = choice
+    
 }
+
+// this.style.backgroundColor = `hsl(${Math.random() * 360}, 100% , 50%`
+
+
+
+
