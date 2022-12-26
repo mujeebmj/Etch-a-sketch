@@ -43,10 +43,9 @@ var color = "green";
 function setColor(){
 
     if( color == "random"){
-
+    
     this.style.backgroundColor = `hsl(${Math.random() * 360}, 100% , 50%`;
-
-    }else{
+    } else{
         this.style.backgroundColor = color
     }
     
